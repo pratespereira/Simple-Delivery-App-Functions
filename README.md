@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Delivery App Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a simple Delivery App Example built using Node.js, Express.js, and the Sequelize ORM. The app showcases various features of a delivery application, including admin management and cart functionality. It is implemented entirely in JavaScript.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+The Delivery App Example demonstrates the following features:
 
-### `npm start`
+- Admin Panel: Allows administrators to manage products and orders.
+- User Cart: Enables users to add products to their carts.
+- Product Management: CRUD operations for managing products.
+- Order Placement: Users can place orders for selected products.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API Endpoints
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app exposes the following API endpoints:
 
-### `npm test`
+- **POST /login**: Handles user authentication and returns a JWT token.
+- **POST /register**: Allows users to create new accounts.
+- **GET /products**: Retrieves the list of available products.
+- **POST /products**: Adds new products to the product list.
+- **GET /sales**: Retrieves all orders placed by users.
+- **POST /sales**: Allows users to place new orders.
+- **GET /admin**: Retrieves admin-specific data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To run the application, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository.
+2. Navigate to the project directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Navigate to the 'backend' directory: `cd backend`
+4. Install the backend dependencies using the command: `npm install`
+5. Configure your database connection in the config/config.json file.
+6. Run the migrations using: `npx sequelize-cli db:migrate`
+7. Start the backend server with: `npm start`
+   The backend server will run on http://localhost:3001.
 
-### `npm run eject`
+### Frontend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+8. Open a new terminal window.
+9. Navigate to the 'frontend' directory: `cd frontend`
+10. Install the frontend dependencies using the command: `npm install`
+11. Start the frontend app with: `npm start`
+    The frontend app will run on http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## About Sequelize
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project uses the Sequelize ORM for handling database interactions. Sequelize is a powerful and flexible ORM that simplifies database operations by providing an intuitive interface to work with databases.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Note
 
-## Learn More
+This project serves as an illustrative example of building a delivery application using Node.js, Express.js, and Sequelize. It covers basic functionality and can be used as a starting point for more complex projects.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore, modify, and expand upon this project according to your needs.
